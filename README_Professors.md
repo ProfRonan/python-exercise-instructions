@@ -63,7 +63,9 @@ Caso queira rodar as ações do GitHub mesmo depois dos minutos estourarem, exis
 
 ## Lista de Exercícios
 
-No momento atual estão disponíveis os exercícios:
+Um template geral para criar novos exercícios pode ser encontrado [aqui](https://github.com/ProfRonan/python-exercise-template).
+
+No momento atual, estão disponíveis os exercícios:
 
 1. [Oi Mundo](https://github.com/ProfRonan/python-hello-world)
 2. [Idade no Ano](https://github.com/ProfRonan/python-age-in-year)
