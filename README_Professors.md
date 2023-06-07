@@ -59,3 +59,11 @@ Caso queira rodar as ações do GitHub mesmo depois dos minutos estourarem, exis
 
 1. Tornar os repositórios públicos via `GitHub Classroom`.
 2. Usar o [act](https://github.com/nektos/act) para rodar as ações localmente.
+
+
+## Lista de Exercícios
+
+No momento atual estão disponíveis os exercícios:
+
+1. [Oi Mundo](https://github.com/ProfRonan/python-hello-world)
+2. [Idade no Ano](https://github.com/ProfRonan/python-age-in-year)
