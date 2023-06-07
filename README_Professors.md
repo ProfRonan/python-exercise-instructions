@@ -69,3 +69,7 @@ No momento atual, estão disponíveis os exercícios:
 
 1. [Oi Mundo](https://github.com/ProfRonan/python-hello-world)
 2. [Idade no Ano](https://github.com/ProfRonan/python-age-in-year)
+3. [Latas de Tintas](https://github.com/ProfRonan/python-paint-buckets)
+4. [Lembretes de Idade](https://github.com/ProfRonan/python-age-decider)
+5. [Fizz Buzz](https://github.com/ProfRonan/python-fizz-buzz)
+6. [Equações](https://github.com/ProfRonan/python-equation-solver)
