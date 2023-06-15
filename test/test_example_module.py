@@ -1,7 +1,8 @@
 """Esse arquivo testa o arquivo example_module.py"""
 
 import unittest  # para criar o caso de teste
-from example_module import soma, multiplicação
+
+from example_module import multiplicacao, soma
 
 
 class TestExampleModule(unittest.TestCase):
@@ -13,9 +14,9 @@ class TestExampleModule(unittest.TestCase):
         """
         self.assertEqual(5, soma(2, 3))
 
-    def test_multiplicação(self):
+    def test_multiplicacao(self):
         """
         Testa se a função de multiplicação retorna o valor correto 6
         quando chamada com 2 e 3
         """
-        self.assertEqual(6, multiplicação(2, 3))
+        self.assertEqual(6, multiplicacao(2, 3))

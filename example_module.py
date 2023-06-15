@@ -6,6 +6,6 @@ def soma(primeiro, segundo):
     return primeiro + segundo
 
 
-def multiplicação(primeiro, segundo):
+def multiplicacao(primeiro, segundo):
     """Multiplica dois números."""
     return primeiro * segundo
