@@ -186,6 +186,10 @@ Caso ele não tenha passado (mostrado com um `❌`), você pode clicar nele para
 Caso o seu trabalho não passe nos testes, você pode fazer as correções necessárias e enviar novamente.
 Contanto que o prazo de entrega não tenha passado, você pode enviar quantas vezes quiser.
 
+> A formatação inadequada e más práticas de programação não são consideradas erros de execução.
+> Mas elas serão consideradas na correção do trabalho.
+> Testes de formatação também de boas práticas vão ser exibidos como erro na aba `Actions` do GitHub quando o código não estiver de acordo.
+
 ## 📝 Correção 📝
 
 A correção do seu trabalho será feita de quase totalmente de forma automática.
@@ -197,6 +201,71 @@ O código bem escrito é aquele que segue as boas práticas de programação e q
 Um retorno sobre o estado da correção e sobre as boas práticas de programação será dado na aba `Pull requests` do exercício.
 
 Caso o `Pull request` tenha sido aceito (_Merged_), o seu trabalho foi corrigido e você verá a nota na planilha de notas no sistema da universidade.
+
+### 🥇 Formatação do Código 🥇
+
+Um dos critérios de correção é a formatação do código.
+
+Para formatar o código, você vai usar o [Black](https://black.readthedocs.io/en/stable/) e o [isort](https://pycqa.github.io/isort/) manualmente ou usando o [VSCode](https://code.visualstudio.com/) para fazer isso automaticamente.
+
+> As instruções assumem que o interpretador `python` está no seu `PATH` e que pode ser chamado com o comando `python`.
+
+Para instalar essas ferramentas, você pode executar os seguintes comandos no terminal:
+
+```bash
+python -m pip install --user black
+python -m pip install --user isort
+```
+
+Ou fazer isso via VSCode quando ele pedir.
+
+#### Usando o VSCode
+
+As configurações já estão feitas para usar o `Black` e o `isort` no VSCode.
+Para que tudo funcione, você precisa ter o `Black` e o `isort` instalados como também ter as extensões [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) e [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort).
+
+Cada vez que você salvar o arquivo, o VSCode vai formatar o código automaticamente.
+
+#### Manualmente
+
+Para formatar o código via terminal, você pode executar os seguintes comandos no terminal:
+
+```bash
+python -m black .
+python -m isort --profile black .
+```
+
+O comando `python -m black .` vai formatar todo o código do diretório atual.
+
+O comando `python -m isort --profile black .` vai organizar as importações do código do diretório atual.
+
+> O comando `python -m black .` pode levar alguns segundos para executar.
+
+### 🥈 Linting 🥈
+
+Em ingles `linting` no context de programação significa verificar o código em busca de erros ou praticas ruins de programação.
+
+Nas atividades da disciplina, o `linting` é feito usando o [pylint](https://www.pylint.org/).
+
+Para instalar o `pylint`, você pode executar o seguinte comando no terminal:
+
+```bash
+python -m pip install --user pylint
+```
+
+Para executar o `pylint`, você pode executar o seguinte comando no terminal:
+
+```bash
+python -m pylint **/*.py
+```
+
+O comando `python -m pylint **/*.py` vai executar o `pylint` em todos os arquivos `.py` do diretório atual e de todos os subdiretórios.
+
+Você também pode utilizar o `pylint` via VSCode.
+Para isso, instale a extensão [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint).
+As configurações já estão feitas para usar o `pylint` no VSCode.
+Os erros e avisos do `pylint` serão mostrados no VSCode na aba `problemas` que fica colada no terminal.
+
 
 ## ❗ Observações Importantes ❗
 
@@ -218,10 +287,10 @@ Pois somente são usadas as bibliotecas padrão do python.
 > Caso você precise instalar as dependências do seu programa, basta executar o seguinte comando:
 >
 > ```bash
-> pip install -r requirements.txt
+> python -m pip install --user -r requirements.txt
 > ```
 
-Os arquivos `Dockerfile` contém as instruções para criar uma imagem do docker com o seu programa.
+O arquivo `Dockerfile` contém as instruções para criar uma imagem do docker com o seu programa.
 Isso é útil para que seja possível executar o seu programa em um ambiente controlado e não ter problemas com dependências nem com possível códigos maliciosos na hora de rodar o programa.
 São usados dois arquivos `Dockerfile`, um para rodar o seu programa e outro para rodar os testes.
 
@@ -233,3 +302,5 @@ Os arquivos dentro da pasta `test` são usados para testar o seu programa.
 O arquivo `__init__.py` serve para dizer ao python que a pasta `test` é um pacote python.
 
 O arquivo `.gitignore` serve para dizer ao git quais arquivos ele deve ignorar.
+
+O arquivo `.pylintrc` serve para configurar o `pylint`.

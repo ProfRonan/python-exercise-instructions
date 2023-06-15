@@ -1,10 +1,24 @@
 {
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
   "cSpell.words": [
     "alice",
-    "multiplicacao"
+    "isort",
+    "multiplicacao",
+    "pylint",
+    "pylintrc"
   ],
   "editor.formatOnSave": true,
-  "python.formatting.provider": "black",
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "python.formatting.provider": "none",
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.testing.unittestEnabled": true
