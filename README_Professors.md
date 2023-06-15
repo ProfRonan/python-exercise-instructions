@@ -28,6 +28,23 @@ O comando `python -m unittest test.test_example_module.TestExampleModule.test_so
 
 Assim, é possível associar notas diferentes e pesos diferentes para cada teste individualmente.
 
+### Formatação
+
+Caso seja importante também verificar se os códigos enviados estão de acordo com a formatação do `PEP8` usando o [Black](https://black.readthedocs.io/en/stable/), é possível criar um teste no github classroom para isso.
+
+Na parte de setup do teste, basta colocar o comando `sudo -H pip3 install black` e no comando de execução `python -m black --check --diff .` para verificar se os arquivos estão de acordo com a formatação e mostrar para os alunos quais estão com problemas.
+
+Também é possível utilizar o [isort](https://pycqa.github.io/isort/) para checar se as importações seguem um padrão consistente.
+
+Para isso, basta colocar o comando `sudo -H pip3 install isort` e no comando de execução `python -m isort --profile black --check --diff .` para verificar se os arquivos estão de acordo e mostrar para os alunos quais estão com problemas.
+
+### Linting
+
+Caso seja importante também verificar se os códigos enviados estão de acordo com a formatação do `PEP8` e usam algumas regras de boas práticas de programação usando o [pylint](https://www.pylint.org/), é possível criar um teste no github classroom para isso.
+
+Na parte de setup do teste, basta colocar o comando `sudo -H pip3 install pylint` e no comando de execução `python -m pylint **/*.py` para verificar se os arquivos estão de acordo com a formatação e mostrar para os alunos quais estão com problemas.
+
+
 ## Rodar Localmente os Trabalhos
 
 Para evitar rodar código diretamente na máquina é recomendável utilizar um container para isolar a execução do código dos alunos do restante da máquina.
