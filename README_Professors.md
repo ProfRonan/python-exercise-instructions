@@ -110,5 +110,6 @@ No momento atual, estão disponíveis os exercícios:
 11. [Contador de Vogais](https://github.com/ProfRonan/python-vowel-counting)
 12. [Soma Alvo](https://github.com/ProfRonan/python-target-sum)
 13. [Lista Fatores Primos](https://github.com/ProfRonan/python-list-prime-factors)
-14. [Sudoku](https://github.com/ProfRonan/python-sudoku-solver)
-15. [Álgebra Linear](https://github.com/ProfRonan/python-matrix-algebra)
+14. [Gerenciador de Tarefas](https://github.com/ProfRonan/python-todo-tkinter)
+15. [Sudoku](https://github.com/ProfRonan/python-sudoku-solver)
+16. [Álgebra Linear](https://github.com/ProfRonan/python-matrix-algebra)
