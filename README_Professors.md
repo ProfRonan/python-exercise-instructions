@@ -44,6 +44,19 @@ Caso seja importante também verificar se os códigos enviados estão de acordo 
 
 Na parte de setup do teste, basta colocar o comando `sudo -H pip3 install pylint` e no comando de execução `python -m pylint **/*.py` para verificar se os arquivos estão de acordo com a formatação e mostrar para os alunos quais estão com problemas.
 
+### Combinando Linting e Formatação
+
+Para fazer todos eles em um comando só, na parte do setup do teste, basta colocar o comando:
+
+```bash
+sudo -H pip3 install -r requirements.txt
+```
+
+E no comando de execução:
+
+```bash
+python -m black --check --diff . && python -m isort --profile black --check --diff . && python -m pylint **/*.py
+```
 
 ## Rodar Localmente os Trabalhos
 
